@@ -1,11 +1,11 @@
-<section id="main-content" class="container main_content homepage">
-  <header class="container header">
+<main id="main-content" class="container main_content homepage">
+  <div class="container header">
     {{ partial "bloc/content/h1-title" . }}
     {{ partial "bloc/content/lastupdate" . }}
-  </header>
+  </div>
   {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
   {{ range $paginator.Pages }}
     {{ .Render "summary" }}
   {{ end }}
   {{ partial "bloc/content/pagination" . }}
-</section>
+</main>
